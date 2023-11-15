@@ -93,16 +93,16 @@
 
       //update item function
       function updateItem(item_quantity, itemPrice, item_price, x) {
-         var itemQuantity = parseInt(document.getElementById(item_quantity).value);
+         let itemQuantity = parseInt(document.getElementById(item_quantity).value);
          itemQuantity = itemQuantity + x;
          document.getElementById(item_quantity).value = itemQuantity;
-         var itemTotalPrice = itemPrice * itemQuantity;
+         let itemTotalPrice = itemPrice * itemQuantity;
          document.getElementById(item_price).innerText = itemTotalPrice;
          const subTotalValue = parseInt(document.getElementById('subtotal_value').innerText);
-         var subTotalValueNew = subTotalValue + x*itemPrice;
+         let subTotalValueNew = subTotalValue + x*itemPrice;
          document.getElementById('subtotal_value').innerText = subTotalValueNew;
          const totalValue = parseInt(document.getElementById('total_value').innerText);
-         var totalValueNew = totalValue + x*itemPrice;
+         let totalValueNew = totalValue + x*itemPrice;
          document.getElementById('total_value').innerText = totalValueNew;
       };
 
@@ -133,8 +133,8 @@
          const subTotalValue = parseInt(document.getElementById('subtotal_value').innerText);
          const productTotalPrice = parseInt(document.getElementById(product_price).innerText);
          const totalValue = parseInt(document.getElementById('total_value').innerText);
-         var subTotalValueNew = subTotalValue - productTotalPrice;
-         var totalValueNew = totalValue - productTotalPrice;
+         let subTotalValueNew = subTotalValue - productTotalPrice;
+         let totalValueNew = totalValue - productTotalPrice;
          document.getElementById('subtotal_value').innerText = subTotalValueNew;
          document.getElementById('total_value').innerText = totalValueNew;
          productItem.remove();
